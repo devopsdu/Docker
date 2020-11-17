@@ -26,3 +26,23 @@ app.listen(8080, () => {
   console.log('Listening on port 8080');
 });
 
+
+Dockerfile
+----------
+
+From alpine
+RUN npm install
+CMD ["npm", "Start"]
+
+For the next run use,
+From node:alpine
+RUN npm install
+CMD ["npm", "Start"]
+
+For the next run use,
+From node:alpine
+COPY ./ ./
+RUN npm install
+CMD ["npm", "Start"]
+
+
